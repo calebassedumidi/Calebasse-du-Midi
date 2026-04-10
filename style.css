@@ -1,0 +1,121 @@
+
+
+:root {
+    --primary: #d9534f; 
+    --secondary: #f0ad4e; 
+    --dark-green: #1b4332; 
+    --light: #dfdfb9; 
+}
+
+body {
+    background-color: var(--light);
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    padding-top: 60px;
+}
+nav{
+    margin-top: 30px;
+    position:relative;
+    top: 30px;
+    
+}
+
+.navbar {
+    background-color: var(--dark-green);
+    border-bottom: 3px solid var(--secondary);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--secondary);
+    text-transform: uppercase;
+}
+
+.nav-link {
+    color: white;
+    transition: 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--secondary);
+}
+
+.hero-section {
+    padding-top: 50px;
+    background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+    url("Image/Mon\ resto.jpg"); 
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.history-section{
+    background-color:#fdfcf0; 
+    color: #2d3436;
+}
+.history-section h2{
+    color: var(--dark-green);
+    position: relative;
+}
+.history-section h2::after{
+    content:"";
+display: block;
+width: 60px;
+height: 4px;
+background-color: var(--secondary);
+margin-top:10px;
+}
+.history-img-wrapper img{
+    transition: transform 0.3s ease;
+}
+
+.history-img-wrapper img:hover{
+    transform:scale(1.02);
+}
+
+.filigrane-container{
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background-color: #fdfcf0;
+    border-radius: 15px;
+}
+
+.filigrane-container::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    height: 100%;
+    background-image: url(image/pexels-zakariahanif-35380392.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.4;
+    z-index: -1;
+    filter: grayscale(100%);
+}
+
+.filigrane-container h2, .filigrane-container p{
+    position: relative;
+    z-index: 2;
+} 
+.card-img-top {
+    height: 400px;
+    object-fit: cover;
+}
+
+footer {
+    background-color: var(--dark-green);
+    color: white;
+    padding: 20px 0;
+    padding-left: 20px;
+    margin-top: 50px;
+    text-align: center;
+}
